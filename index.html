@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers at ACME - Join Our Team</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 4rem;
+        color: white;
+      }
+
+      .logo {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .tagline {
+        font-size: 1.25rem;
+        opacity: 0.9;
+      }
+
+      .main-content {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 3rem;
+      }
+
+      .hero-section {
+        background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        padding: 4rem 3rem;
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .content-section {
+        padding: 3rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        color: #2d3748;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .feature {
+        padding: 2rem;
+        background: #f7fafc;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+      }
+
+      .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature h3 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #2d3748;
+      }
+
+      .feature p {
+        color: #718096;
+      }
+
+      .widget-config {
+        background: #f8f9fa;
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 2rem 0;
+      }
+
+      .config-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        color: #495057;
+      }
+
+      .input-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .input-label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #495057;
+      }
+
+      .input-field {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 2px solid #dee2e6;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.2s ease;
+      }
+
+      .input-field:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.75rem 2rem;
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+      }
+
+      .demo-text {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .status {
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        font-weight: bold;
+        margin-top: 1rem;
+        display: none;
+      }
+
+      .status.success {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .status.error {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        .logo {
+          font-size: 2rem;
+        }
+
+        .hero-title {
+          font-size: 2rem;
+        }
+
+        .content-section {
+          padding: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">🚀 ACME</div>
+        <div class="tagline">Shape the Future with Us - We're Hiring!</div>
+      </div>
+
+      <div class="main-content">
+        <div class="hero-section">
+          <h1 class="hero-title">Your Dream Career Awaits</h1>
+          <p class="hero-subtitle">
+            Join ACME's talented team and work on cutting-edge projects that
+            shape the future. Chat with our AI recruiter to learn about open
+            positions and get started!
+          </p>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Why Work at ACME?</h2>
+
+          <div class="features">
+            <div class="feature">
+              <div class="feature-icon">🎯</div>
+              <h3>Meaningful Impact</h3>
+              <p>
+                Work on projects that matter and make a real difference in
+                people's lives and businesses worldwide.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🚀</div>
+              <h3>Career Growth</h3>
+              <p>
+                Accelerate your career with mentorship, training programs, and
+                opportunities to lead innovative projects.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">💎</div>
+              <h3>Amazing Benefits</h3>
+              <p>
+                Competitive salary, comprehensive health coverage, flexible work
+                arrangements, and unlimited PTO.
+              </p>
+            </div>
+          </div>
+
+          <div class="widget-config">
+            <h3 class="config-title">🛠️ Widget Configuration</h3>
+            <p>Test the chat widget with different assistant configurations:</p>
+
+            <div class="input-group">
+              <label for="assistantId" class="input-label">Assistant ID:</label>
+              <input
+                type="text"
+                id="assistantId"
+                class="input-field"
+                placeholder="Enter assistant ID (e.g., 123456789)"
+                value="" />
+            </div>
+
+            <button onclick="updateWidget()" class="btn">
+              Update Chat Widget
+            </button>
+            <div id="status" class="status"></div>
+          </div>
+
+          <div class="demo-text">
+            <p>
+              <strong>💬 Chat with our AI Recruiter:</strong>
+              Look for the chat icon in the bottom-right corner! Ask about open
+              positions, company culture, interview process, or anything else
+              about working at ACME.
+            </p>
+          </div>
+
+          <h2 class="section-title">Open Positions</h2>
+          <div class="features">
+            <div class="feature">
+              <div class="feature-icon">💻</div>
+              <h3>Software Engineers</h3>
+              <p>
+                Full-stack, Frontend, Backend, and Mobile developers to build
+                next-generation applications.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🎨</div>
+              <h3>Product Designers</h3>
+              <p>
+                UX/UI designers to craft beautiful, intuitive experiences for
+                our global user base.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">📊</div>
+              <h3>Data Scientists</h3>
+              <p>
+                ML engineers and data analysts to drive insights and build
+                intelligent systems.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🔧</div>
+              <h3>DevOps Engineers</h3>
+              <p>
+                Infrastructure experts to scale our platforms and ensure 99.9%
+                uptime.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">📈</div>
+              <h3>Product Managers</h3>
+              <p>
+                Strategic thinkers to guide product vision and coordinate
+                cross-functional teams.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🎯</div>
+              <h3>Marketing Specialists</h3>
+              <p>
+                Creative marketers to tell our story and grow our brand across
+                digital channels.
+              </p>
+            </div>
+          </div>
+
+          <p style="color: #666; font-style: italic; margin-top: 2rem">
+            Don't see your role? We're always looking for exceptional talent!
+            Chat with our AI recruiter to learn about upcoming opportunities and
+            how you can contribute to our mission.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://modernloop.ai/chat-widget.js"></script>
+    <script>
+      let currentWidget = null;
+
+      function updateWidget() {
+        const assistantId = document.getElementById('assistantId').value.trim();
+        const statusEl = document.getElementById('status');
+
+        if (!assistantId) {
+          showStatus('Please enter an Assistant ID', 'error');
+          return;
+        }
+
+        try {
+          // Destroy existing widget if it exists
+          if (currentWidget && typeof currentWidget.destroy === 'function') {
+            currentWidget.destroy();
+          }
+
+          // Create new widget with updated assistantId
+          if (typeof ChatWidget !== 'undefined') {
+            currentWidget = ChatWidget.create({
+              assistantId: assistantId,
+              position: 'bottom-right',
+              size: 'medium',
+            });
+            showStatus(
+              `Chat widget updated with Assistant ID: ${assistantId}`,
+              'success',
+            );
+          } else {
+            showStatus(
+              'ChatWidget is not loaded. Please check if chat-widget.js is available.',
+              'error',
+            );
+          }
+        } catch (error) {
+          showStatus(`Error updating widget: ${error.message}`, 'error');
+        }
+      }
+
+      function showStatus(message, type) {
+        const statusEl = document.getElementById('status');
+        statusEl.textContent = message;
+        statusEl.className = `status ${type}`;
+        statusEl.style.display = 'block';
+
+        setTimeout(() => {
+          statusEl.style.display = 'none';
+        }, 5000);
+      }
+
+      // Initialize widget with default assistant ID on page load
+      window.addEventListener('DOMContentLoaded', function () {
+        // Try to initialize with a default ID if ChatWidget is available
+        if (typeof ChatWidget !== 'undefined') {
+          try {
+            currentWidget = ChatWidget.create({
+              assistantId: 'xzlps5gx9zl6',
+              position: 'bottom-right',
+              size: 'medium',
+            });
+          } catch (error) {
+            console.warn('Could not initialize default chat widget:', error);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
